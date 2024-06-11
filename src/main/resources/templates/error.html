@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>SupplementUI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+ba2h5oYl5GQvLh3K6PpXhNfKM9K1" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container mt-5">
+    <div class="text-center mb-4">
+        <h1 class="display-4">Supplement Information</h1>
+        <p class="lead">Find detailed information about various supplements and their benefits.</p>
+    </div>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h2 class="card-title text-center mb-4"><strong>Search for supplements below!</strong></h2>
+            <form class="row g-3" th:action="@{/supplement}" method="get">
+                <div class="col-12">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for supplements..." name="name" aria-label="Search for supplements">
+                        <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
+                        <p style="color:red;">  Supplement not found.</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
