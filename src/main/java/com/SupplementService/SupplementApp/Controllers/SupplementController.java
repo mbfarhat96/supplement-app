@@ -32,11 +32,6 @@ public class SupplementController {
         System.out.println("Working on it" +name);
         Supplement supplement = supplementService.returnSupplement(name);
 
-        //error handler if supplement not found.
-        if (supplement == null) {
-            return "error";
-        };
-
         System.out.println(supplement);
         model.addAttribute(supplement);
         return "supplementResult";

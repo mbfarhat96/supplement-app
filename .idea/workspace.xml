@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b2e955e-5cfb-415d-bfb1-ed96b59bf3a7" name="Changes" comment="">
+    <list default="true" id="5b2e955e-5cfb-415d-bfb1-ed96b59bf3a7" name="Changes" comment="imp: added error handling for invalid search">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/SupplementService/SupplementApp/Controllers/SupplementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/SupplementService/SupplementApp/Controllers/SupplementController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/supplementResult.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/supplementResult.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/SupplementService/SupplementApp/Controllers/SupplementController$SupplementNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/SupplementService/SupplementApp/Controllers/SupplementController$SupplementNotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/SupplementService/SupplementApp/Controllers/SupplementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/SupplementService/SupplementApp/Controllers/SupplementController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/error.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/supplementResult.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/supplementResult.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -152,8 +157,25 @@
       <workItem from="1718114561642" duration="1326000" />
       <workItem from="1718115928181" duration="4348000" />
       <workItem from="1718124671809" duration="584000" />
-      <workItem from="1718125270709" duration="960000" />
+      <workItem from="1718125270709" duration="2945000" />
     </task>
+    <task id="LOCAL-00001" summary="imp: added error handling for invalid search">
+      <option name="closed" value="true" />
+      <created>1718126302217</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718126302217</updated>
+    </task>
+    <task id="LOCAL-00002" summary="imp: added error handling for invalid search">
+      <option name="closed" value="true" />
+      <created>1718126309884</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718126309884</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,5 +191,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="imp: added error handling for invalid search" />
+    <option name="LAST_COMMIT_MESSAGE" value="imp: added error handling for invalid search" />
   </component>
 </project>

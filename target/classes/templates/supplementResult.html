@@ -15,10 +15,6 @@
 
     <div th:if="${supplement != null}" class="card shadow-sm">
         <div class="card-body">
-
-            <h2 class="card-title" id="supplementName"  th:text="${supplement.name}" ></h2>
-            <p class="card-text"><strong>Benefits:</strong> <span  id="supplementBenefits"  th:text="${supplement.benefits}"></span></p>
-            <p class="card-text"><strong>Evidence Strength:</strong> <span  id="supplementEvidence"  th:text="${supplement.evidence}"></span></p>
             <form class="supplementSearch mb-4" th:action="@{/supplement}" method="get">
                 <div class="col-12">
                     <div class="input-group">
@@ -27,6 +23,10 @@
                     </div>
                 </div>
             </form>
+            <h2 class="card-title mb-5" id="supplementName" th:text="${supplement.name}" ></h2>
+            <p class="card-text" th:text="${supplement.description}" id="supplementDescription"></p>
+            <p class="card-text"><strong>Benefits:</strong> <span  id="supplementBenefits"  th:text="${supplement.benefits}"></span></p>
+            <p class="card-text"><strong>Evidence Strength:</strong> <span  id="supplementEvidence"  th:text="${supplement.evidence}"></span></p>
             <p class="card-text" id="searchError"></p>
         </div>
     </div>

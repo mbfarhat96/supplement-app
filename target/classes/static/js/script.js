@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const initialData = {
         name: document.getElementById('supplementName').innerText,
+        description: document.getElementById('supplementDescription').innerText,
         benefits: document.getElementById('supplementBenefits').innerText,
         evidence: document.getElementById('supplementEvidence').innerText
     }
@@ -10,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // 2. Function to Update Page Content
 function updatePage(data) {
     document.getElementById('supplementName').textContent = data.name;
+    document.getElementById('supplementDescription').textContent = data.description;
     document.getElementById('supplementBenefits').textContent = data.benefits;
     document.getElementById('supplementEvidence').textContent = data.evidence;
     console.log("Updating");
