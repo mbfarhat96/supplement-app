@@ -24,9 +24,12 @@ searchForm.addEventListener('submit', (event) => {
 
     fetch('/supplement-details?name=' + supplementName)
         .then(response => response.json()) // Get JSON data
-        .then(data => updatePage(data))   // Update page with new data
+        .then(data => {
+            updatePage(data);
+            document.getElementById('searchError').innerText = "";
+        })   // Update page with new data
         .catch(error => {
-            // Handle errors (show a message, etc.)
+            document.getElementById('searchError').innerText = "Invalid supplement name";
             console.error('Error fetching supplement details:', error); 
         });
 });
