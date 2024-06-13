@@ -18,9 +18,10 @@
             <form class="supplementSearch mb-4" th:action="@{/supplement}" method="get">
                 <div class="col-12">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search for supplements..." name="name" aria-label="Search for supplements">
+                        <input type="text" class="form-control" id="search" placeholder="Search for supplements..." name="name" aria-label="Search for supplements" autocomplete="off">
                         <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
                     </div>
+                    <div id="suggestions"></div>
                 </div>
             </form>
             <h2 class="card-title mb-5" id="supplementName" th:text="${supplement.name}" ></h2>

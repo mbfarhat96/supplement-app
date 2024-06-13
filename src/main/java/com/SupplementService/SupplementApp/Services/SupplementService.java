@@ -21,4 +21,7 @@ public class SupplementService {
         return supplementRepository.findByName(name);
     }
 
+    public List<String> returnSupplementName(String query) {
+        return supplementRepository.findByNameContainingIgnoreCase(query);
+    }
 }

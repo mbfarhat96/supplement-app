@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
 
 @Controller
 public class SupplementController {
@@ -60,6 +62,13 @@ public class SupplementController {
         }
         //Return supplement
         return supplement;
+    }
+
+    @GetMapping("/autocomplete")
+    @ResponseBody
+    public List<String> getAutoCompleteName(@RequestParam String query){
+        System.out.println("Working on it" +query);
+        return supplementService.returnSupplementName(query);
     }
 
 

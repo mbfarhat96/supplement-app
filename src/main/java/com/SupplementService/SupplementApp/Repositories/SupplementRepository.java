@@ -13,4 +13,7 @@ public interface SupplementRepository extends JpaRepository<Supplement,Integer> 
 
     @Query("SELECT s FROM Supplement s WHERE s.name LIKE :name%")
     Supplement findByName(@Param("name") String name);
+
+    @Query("SELECT s.name FROM Supplement s WHERE s.name LIKE %:name%")
+    List<String> findByNameContainingIgnoreCase(String name);
 }

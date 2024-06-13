@@ -17,3 +17,20 @@ body {
     background-color: #2575fc;
     border-color: #2575fc;
 }
+
+#suggestions {
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    width: 97.5%;
+    background-color: white;
+    z-index: 1000;
+}
+.suggestion {
+    padding: 8px;
+    cursor: pointer;
+}
+.suggestion:hover {
+    background-color: #f0f0f0;
+}

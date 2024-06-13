@@ -23,7 +23,7 @@ body {
     max-height: 150px;
     overflow-y: auto;
     position: absolute;
-    width: 100%;
+    width: 97.5%;
     background-color: white;
     z-index: 1000;
 }
