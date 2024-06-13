@@ -1,3 +1,4 @@
+// 1. Event listener for HTML && initial data loader
 document.addEventListener('DOMContentLoaded', () => {
     const initialData = {
         name: document.getElementById('supplementName').innerText,
@@ -14,7 +15,6 @@ function updatePage(data) {
     document.getElementById('supplementDescription').textContent = data.description;
     document.getElementById('supplementBenefits').textContent = data.benefits;
     document.getElementById('supplementEvidence').textContent = data.evidence;
-    console.log("Updating");
 }
 
 // 3. AJAX Search (on Form Submit)
@@ -35,3 +35,8 @@ searchForm.addEventListener('submit', (event) => {
             console.error('Error fetching supplement details:', error); 
         });
 });
+
+//4. Search autocomplete
+
+
+
