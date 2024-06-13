@@ -2,9 +2,11 @@ package com.SupplementService.SupplementApp.Models;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
+
 @Entity
 @Table(name = "supplements")
-public class Supplement {
+public class Supplement implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
