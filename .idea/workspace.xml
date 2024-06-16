@@ -4,17 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b2e955e-5cfb-415d-bfb1-ed96b59bf3a7" name="Changes" comment="fix: removed unnecessary comments">
+    <list default="true" id="5b2e955e-5cfb-415d-bfb1-ed96b59bf3a7" name="Changes" comment="feat: implemented search autocomplete feature&#10;changes to: templates,controller,service, and repository">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/SupplementService/SupplementApp/Controllers/SupplementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/SupplementService/SupplementApp/Controllers/SupplementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/SupplementService/SupplementApp/Repositories/SupplementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/SupplementService/SupplementApp/Repositories/SupplementRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/SupplementService/SupplementApp/Services/SupplementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/SupplementService/SupplementApp/Services/SupplementService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/supplementResult.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/supplementResult.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/SupplementService/SupplementApp/Models/Supplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/SupplementService/SupplementApp/Models/Supplement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/SupplementService/SupplementApp/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/SupplementService/SupplementApp/config/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/SupplementService/SupplementApp/Controllers/SupplementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/SupplementService/SupplementApp/Controllers/SupplementController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/supplementResult.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/supplementResult.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/SupplementService/SupplementApp/Models/Supplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/SupplementService/SupplementApp/Models/Supplement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/SupplementService/SupplementApp/config/RedisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/SupplementService/SupplementApp/config/RedisConfig.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +31,7 @@
       <list>
         <option value="Interface" />
         <option value="HTML File" />
+        <option value="Dockerfile" />
         <option value="Class" />
       </list>
     </option>
@@ -93,9 +96,12 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "DefaultHtmlFileTemplate": "HTML File",
+    "Maven.SupplementApp [clean].executor": "Run",
+    "Maven.SupplementApp [compile].executor": "Run",
+    "Maven.SupplementApp [package].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/search-autocomplete",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/mohsi/OneDrive/Desktop/Supplement",
     "node.js.detected.package.eslint": "true",
@@ -106,7 +112,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "project.propCompiler",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -124,13 +130,43 @@
       <recent name="C:\Users\mohsi\OneDrive\Desktop\SupplementApp\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Maven.SupplementApp [clean]">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.SupplementService.SupplementApp.SupplementAppApplication" />
       <module name="SupplementApp" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="SupplementApp [clean]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
     </configuration>
     <configuration name="SupplementAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -140,6 +176,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Maven.SupplementApp [clean]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -163,6 +204,8 @@
       <workItem from="1718125270709" duration="4787000" />
       <workItem from="1718204316003" duration="12359000" />
       <workItem from="1718284563152" duration="3291000" />
+      <workItem from="1718377058600" duration="4026000" />
+      <workItem from="1718381145628" duration="11162000" />
     </task>
     <task id="LOCAL-00001" summary="imp: added error handling for invalid search">
       <option name="closed" value="true" />
@@ -196,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718285760816</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: implemented search autocomplete feature&#10;changes to: templates,controller,service, and repository">
+      <option name="closed" value="true" />
+      <created>1718288162733</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718288162733</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,6 +295,7 @@
     <MESSAGE value="imp: added error handling for invalid search" />
     <MESSAGE value="imp: removed error handling in controller.&#10;feat: added description to the supplement card." />
     <MESSAGE value="fix: removed unnecessary comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: removed unnecessary comments" />
+    <MESSAGE value="feat: implemented search autocomplete feature&#10;changes to: templates,controller,service, and repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: implemented search autocomplete feature&#10;changes to: templates,controller,service, and repository" />
   </component>
 </project>

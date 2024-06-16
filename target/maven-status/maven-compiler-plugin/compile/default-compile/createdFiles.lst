@@ -1,0 +1,6 @@
+com\SupplementService\SupplementApp\SupplementAppApplication.class
+com\SupplementService\SupplementApp\Repositories\SupplementRepository.class
+com\SupplementService\SupplementApp\config\RedisConfig.class
+com\SupplementService\SupplementApp\Controllers\SupplementController.class
+com\SupplementService\SupplementApp\Models\Supplement.class
+com\SupplementService\SupplementApp\Services\SupplementService.class
